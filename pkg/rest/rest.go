@@ -17,6 +17,7 @@ import (
 	"github.com/elastifile/emanage-go/pkg/retry"
 
 	"github.com/elastifile/errors"
+	"crypto/tls"
 )
 
 var Log = log.New("package", "rest")
@@ -61,10 +62,23 @@ func NewSession(baseURL *url.URL) *Session {
 	result.init()
 	return result
 }
+//
+//func (rs *Session) init() {
+//	rs.client = http.Client{
+//		Transport: &http.Transport{DisableKeepAlives: true},
+//	}
+//}
 
 func (rs *Session) init() {
 	rs.client = http.Client{
-		Transport: &http.Transport{DisableKeepAlives: true},
+		//CheckRedirect: CheckRedirect,
+		Timeout:       Timeout,
+		Transport: &http.Transport{
+			DisableKeepAlives: true,
+			TLSClientConfig: &tls.Config{
+				InsecureSkipVerify: true,
+			},
+		},
 	}
 }
 
