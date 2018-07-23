@@ -1,0 +1,138 @@
+dedupratio=8
+dedupunit=2k
+compratio=10
+
+hd=default,user=root,shell=ssh
+hd=10.11.20.122,system=10.11.20.122
+hd=10.11.20.124,system=10.11.20.124
+hd=10.11.20.126,system=10.11.20.126
+hd=10.11.20.128,system=10.11.20.128
+
+hd=10.11.60.2,system=10.11.60.2
+hd=10.11.60.4,system=10.11.60.4
+hd=10.11.60.6,system=10.11.60.6
+hd=10.11.60.8,system=10.11.60.8
+
+
+
+
+fsd=fsd1,anchor=/data/test1,depth=2,width=32,files=3000,size=(128k,30,512k,30,1m,25,10m,10,20m,5),shared=yes,openflags=o_direct
+#fsd=fsd2,anchor=/data/test12,depth=2,width=8,files=750,size=(128k,30,512k,30,1m,25,10m,10,20m,5),shared=yes,openflags=o_direct
+#fsd=fsd3,anchor=/data/test13,depth=2,width=8,files=750,size=(128k,30,512k,30,1m,25,10m,10,20m,5),shared=yes,openflags=o_direct
+#fsd=fsd4,anchor=/data/test14,depth=2,width=8,files=750,size=(128k,30,512k,30,1m,25,10m,10,20m,5),shared=yes,openflags=o_direct
+
+###  256k Sequential IO
+fwd=256K_Sequential_Write,fsd=fsd*,operation=write,xfersize=256k,fileio=sequential,fileselect=random,threads=32
+fwd=256K_Sequential_Read,fsd=fsd*,operation=read,xfersize=256k,fileio=sequential,fileselect=random,threads=32
+
+###  256k Random IO
+fwd=256K_Random_Write,fsd=fsd*,operation=write,xfersize=256k,fileio=random,fileselect=random,threads=32
+fwd=256K_Random_Read,fsd=fsd*,operation=read,xfersize=256k,fileio=random,fileselect=random,threads=32
+
+
+###  128k Sequential IO
+fwd=128K_Sequential_Write,fsd=fsd*,operation=write,xfersize=128k,fileio=sequential,fileselect=random,threads=64
+fwd=128K_Sequential_Read,fsd=fsd*,operation=read,xfersize=128k,fileio=sequential,fileselect=random,threads=64
+
+
+###  128k Random IO
+fwd=128K_Random_Write,fsd=fsd*,operation=write,xfersize=128k,fileio=random,fileselect=random,threads=64
+fwd=128K_Random_Read,fsd=fsd*,operation=read,xfersize=128k,fileio=random,fileselect=random,threads=64
+
+
+#### 4K, 8K and 32K/ random / 70% read
+fwd=4K_8K_32K_Random_R70_W301,fsd=fsd*,xfersize=(4k,60,8K,30,32k,10),rdpct=70,fileio=random,fileselect=random,threads=600
+
+#### 4K IOPS
+# 4K Random Read
+fwd=4K_Random_Read1,fsd=fsd*,operation=read,xfersize=4k,fileio=random,fileselect=random,threads=800
+# 4K Random Write
+fwd=4K_Random_Write1,fsd=fsd*,operation=write,xfersize=4k,fileio=random,fileselect=random,threads=550
+# 4K Sequential Read
+fwd=4K_Sequential_Read1,fsd=fsd*,operation=read,xfersize=4k,fileio=sequential,fileselect=random,threads=800
+# 4K Sequential Write
+fwd=4K_Sequential_Write1,fsd=fsd*,operation=write,xfersize=4k,fileio=sequential,fileselect=random,threads=550
+# 4K R70 W30
+fwd=4K_Random_W30_R701,fsd=fsd*,xfersize=4k,rdpct=70,fileio=random,fileselect=random,threads=800
+
+#### 8K IOPS
+# 8K Random Read
+fwd=8K_Random_Read1,fsd=fsd*,operation=read,xfersize=8k,fileio=random,fileselect=random,threads=700
+# 8K Random Write
+fwd=8K_Random_Write1,fsd=fsd*,operation=write,xfersize=8k,fileio=random,fileselect=random,threads=500
+# 8K Sequential Read
+fwd=8K_Sequential_Read1,fsd=fsd*,operation=read,xfersize=8k,fileio=sequential,fileselect=random,threads=700
+# 8K Sequential Write
+fwd=8K_Sequential_Write1,fsd=fsd*,operation=write,xfersize=8k,fileio=sequential,fileselect=random,threads=500
+# 8K R70 W30
+fwd=8K_Random_W30_R701,fsd=fsd*,xfersize=8k,rdpct=70,fileio=random,fileselect=random,threads=700
+
+#### 16K IOPS
+# 16K Random Read
+fwd=16K_Random_Read1,fsd=fsd*,operation=read,xfersize=16k,fileio=random,fileselect=random,threads=550
+# 16K Random Write
+fwd=16K_Random_Write1,fsd=fsd*,operation=write,xfersize=16k,fileio=random,fileselect=random,threads=400
+# 16K Sequential Read
+fwd=16K_Sequential_Read1,fsd=fsd*,operation=read,xfersize=16k,fileio=sequential,fileselect=random,threads=550
+# 16K Sequential Write
+fwd=16K_Sequential_Write1,fsd=fsd*,operation=write,xfersize=16k,fileio=sequential,fileselect=random,threads=400
+# 16K R70 W30
+fwd=16K_Random_W30_R701,fsd=fsd*,xfersize=16k,rdpct=70,fileio=random,fileselect=random,threads=550
+
+
+#### 32K IOPS
+# 32K Random Read
+fwd=32K_Random_Read1,fsd=fsd*,operation=read,xfersize=32k,fileio=random,fileselect=random,threads=300
+# 32K Random Write
+fwd=32K_Random_Write1,fsd=fsd*,operation=write,xfersize=32k,fileio=random,fileselect=random,threads=300
+# 32K Sequential Read
+fwd=32K_Sequential_Read1,fsd=fsd*,operation=read,xfersize=32k,fileio=sequential,fileselect=random,threads=300
+# 32K Sequential Write
+fwd=32K_Sequential_Write1,fsd=fsd*,operation=write,xfersize=32k,fileio=sequential,fileselect=random,threads=300
+# 32K R70 W30
+fwd=32K_Random_W30_R701,fsd=fsd*,xfersize=32k,rdpct=70,fileio=random,fileselect=random,threads=300
+
+
+#### 2K IOPS
+# 2K Random Read Hurt
+fwd=2K_Random_Read_Hurt1,fsd=fsd*,operation=read,xfersize=2k,fileio=random,fileselect=random,threads=864
+
+
+# Run Definitions
+#rd=256K_sequential_Write,fwd=256K_Sequential_Write,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=256K_Sequential_Read,fwd=256K_Sequential_Read,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=256K_Random_Write,fwd=256K_Random_Write,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=256K_Random_Read,fwd=256K_Random_Read,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+
+rd=2K_Random_Read_Hurt,fwd=2K_Random_Read_Hurt1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+
+rd=4K_Random_W30_R70,fwd=4K_Random_W30_R701,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=4K_8K_32K_Random_R70_W30,fwd=4K_8K_32K_Random_R70_W301,foroperations=(write,read),fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=4K_Random_Read,fwd=4K_Random_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=4K_Random_Write,fwd=4K_Random_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=4K_Sequential_Read,fwd=4K_Sequential_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=4K_Sequential_Write,fwd=4K_Sequential_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+
+rd=8K_Random_Read,fwd=8K_Random_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=8K_Random_Write,fwd=8K_Random_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=8K_Sequential_Read,fwd=8K_Sequential_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=8K_Sequential_Write,fwd=8K_Sequential_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=8K_Random_W30_R70,fwd=8K_Random_W30_R701,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+
+rd=16K_Random_Read,fwd=16K_Random_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=16K_Random_Write,fwd=16K_Random_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=16K_Sequential_Read,fwd=16K_Sequential_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=16K_Sequential_Write,fwd=16K_Sequential_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+rd=16K_Random_W30_R70,fwd=16K_Random_W30_R701,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+
+#rd=32K_Random_Read,fwd=32K_Random_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=32K_Random_Write,fwd=32K_Random_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=32K_Sequential_Read,fwd=32K_Sequential_Read1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=32K_Sequential_Write,fwd=32K_Sequential_Write1,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=32K_Random_W30_R70,fwd=32K_Random_W30_R701,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+
+#rd=128K_Sequential_Write,fwd=128K_Sequential_Write,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=128K_Sequential_Read,fwd=128K_Sequential_Read,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=128K_Random_Write,fwd=128K_Random_Write,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+#rd=128K_Random_Read,fwd=128K_Random_Read,fwdrate=max,format=restart,elapsed=60,interval=1,pause=10
+
