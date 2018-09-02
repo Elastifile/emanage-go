@@ -333,7 +333,7 @@ func By(text string, callbacks ...func()) {
 	if !config.DefaultReporterConfig.NoColor {
 		msg = "\x1b[1m" + msg + "\x1b[0m"
 	}
-	logging.Log().Action(msg)
+	logging.Log().Info(msg)
 	if len(callbacks) == 1 {
 		callbacks[0]()
 	}

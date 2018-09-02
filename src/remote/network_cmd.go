@@ -312,14 +312,14 @@ func (rem *Remote) CheckNicLinkStatusByVlan(vlan int, expectedNicLinkStatus stri
 
 // BringInterfaceLinkDownByDev brings the interface's link down by device name
 func (rem *Remote) BringInterfaceLinkDownByDev(deviceName string) error {
-	logger.Action("Bringing network interface link DOWN by device name",
+	logger.Info("Bringing network interface link DOWN by device name",
 		"nodeAddress", rem.Address(), "deviceName", deviceName)
 	return rem.ipLinkSet(deviceName, "down")
 }
 
 // BringInterfaceLinkUpByDev brings the interface's link up by device name
 func (rem *Remote) BringInterfaceLinkUpByDev(deviceName string) error {
-	logger.Action("Bringing network interface link UP by device name",
+	logger.Info("Bringing network interface link UP by device name",
 		"nodeAddress", rem.Address(), "deviceName", deviceName)
 	return rem.ipLinkSet(deviceName, "up")
 }
@@ -348,7 +348,7 @@ func (rem *Remote) BringInterfaceLinkUpByVlan(vlan int) (err error) {
 
 // BringInterfaceDown brings the NIC down by MAC address using ifdown - deprecated
 func (rem *Remote) BringInterfaceDown(mac string) error {
-	logger.Action("bring interface down", "nodeAddress", rem.Address(), "mac", mac)
+	logger.Info("bring interface down", "nodeAddress", rem.Address(), "mac", mac)
 	logger.Warn("Using 'ifdown' is deprecated - test should be updated to use 'ip link set' instead")
 	nic, err := rem.GetNetworkInterfaceByMac(mac)
 	if err != nil {
@@ -363,7 +363,7 @@ func (rem *Remote) BringInterfaceDown(mac string) error {
 
 // BringInterfaceUp brings the NIC up by MAC address using ifup - deprecated
 func (rem *Remote) BringInterfaceUp(mac string) error {
-	logger.Action("bring interface up", "nodeAddress", rem.Address(), "mac", mac)
+	logger.Info("bring interface up", "nodeAddress", rem.Address(), "mac", mac)
 	logger.Warn("Using 'ifup' is deprecated - test should be updated to use 'ip link set' instead")
 	nic, err := rem.GetNetworkInterfaceByMac(mac)
 	if err != nil {

@@ -99,7 +99,7 @@ func (t *toolClientBase) Start(identifiers ...string) (StopWaiter, error) {
 		return nil, errors.Wrap(err, 0)
 	}
 
-	logger.Action("Start tool", "name", t.name, "system", t.system.Name(), "targets", targets, "export", t.conf.Tesla.Elfs.Export)
+	logger.Info("Start tool", "name", t.name, "system", t.system.Name(), "targets", targets, "export", t.conf.Tesla.Elfs.Export)
 
 	toolParams := &types.ToolParams{
 		Identifier:    t.Identifier,
@@ -141,7 +141,7 @@ func (t *toolClientBase) Wait() (resultWaiter, error) {
 	if t.params != nil {
 		args = t.params.Args
 	}
-	logger.Action("Waiting tool to finish ...", "name", t.name, "args", args, "job", t.jobID)
+	logger.Info("Waiting tool to finish ...", "name", t.name, "args", args, "job", t.jobID)
 	exitcode, err := tooly.RequestWait(context, t.jobID)
 	logger.Info("Tool done", "id", t.Identifier, "job", t.jobID)
 	sessionResults[string(t.jobID)] = t.GetResults()
@@ -170,7 +170,7 @@ func (t *toolClientBase) Stop() (waiter, error) {
 	if t.stopped {
 		return nil, errors.Errorf("stopping stopped tool?")
 	}
-	logger.Action("Client stops tool", "tool", t.name)
+	logger.Info("Client stops tool", "tool", t.name)
 
 	t.stopped = true
 	tooly := t.tooly

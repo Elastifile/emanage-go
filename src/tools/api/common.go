@@ -80,7 +80,7 @@ func (t *Tools) NewErun(config ...*erun_config.Config) ToolPropsCollector {
 	} else {
 		conf = t.conf.Erun
 	}
-	logger.Action("New Erun", helputils.MustStructToKeyValueInterfaces(conf)...)
+	logger.Info("New Erun", helputils.MustStructToKeyValueInterfaces(conf)...)
 
 	result := &erun{
 		toolClientBase: &toolClientBase{
@@ -102,7 +102,7 @@ func (t *Tools) NewSfs2008(config ...*sfs2008_config.Config) ToolPropsCollector 
 	} else {
 		conf = &t.conf.Sfs2008
 	}
-	logger.Action("New sfs2008", helputils.MustStructToKeyValueInterfaces(conf)...)
+	logger.Info("New sfs2008", helputils.MustStructToKeyValueInterfaces(conf)...)
 
 	result := &sfs2008{
 		toolClientBase: &toolClientBase{
@@ -123,7 +123,7 @@ func (t *Tools) NewSfs2014(config ...*sfs2014_config.Config) ToolPropsCollector 
 	} else {
 		conf = &t.conf.Sfs2014
 	}
-	logger.Action("New sfs2014", helputils.MustStructToKeyValueInterfaces(conf)...)
+	logger.Info("New sfs2014", helputils.MustStructToKeyValueInterfaces(conf)...)
 
 	result := &sfs2014{
 		toolClientBase: &toolClientBase{
@@ -147,23 +147,23 @@ func (t *Tools) NewFsTool(config ...fstool_config.Config) ToolPropsCollector {
 
 	switch conf.Method {
 	case "TreeCreate":
-		logger.Action("New fstool."+conf.Method,
+		logger.Info("New fstool."+conf.Method,
 			append(helputils.MustStructToKeyValueInterfaces(conf.TreeCreate), helputils.MustStructToKeyValueInterfaces(conf.NfsClient)...)...,
 		)
 	case "TreeUpdate":
-		logger.Action("New fstool."+conf.Method,
+		logger.Info("New fstool."+conf.Method,
 			append(helputils.MustStructToKeyValueInterfaces(conf.TreeUpdate), helputils.MustStructToKeyValueInterfaces(conf.NfsClient)...)...,
 		)
 	case "TreeDelete":
-		logger.Action("New fstool."+conf.Method,
+		logger.Info("New fstool."+conf.Method,
 			append(helputils.MustStructToKeyValueInterfaces(conf.TreeDelete), helputils.MustStructToKeyValueInterfaces(conf.NfsClient)...)...,
 		)
 	case "TreeDiff":
-		logger.Action("New fstool."+conf.Method,
+		logger.Info("New fstool."+conf.Method,
 			append(helputils.MustStructToKeyValueInterfaces(conf.TreeDiff), helputils.MustStructToKeyValueInterfaces(conf.NfsClient)...)...,
 		)
 	default:
-		logger.Action("New fstool", helputils.MustStructToKeyValueInterfaces(conf)...)
+		logger.Info("New fstool", helputils.MustStructToKeyValueInterfaces(conf)...)
 	}
 
 	result := &fsTool{
@@ -205,7 +205,7 @@ func (t *Tools) NewCthon(config ...*cthon_config.Config) ToolPropsCollector {
 	} else {
 		conf = &t.conf.Cthon
 	}
-	logger.Action("New Cthon", helputils.MustStructToKeyValueInterfaces(conf)...)
+	logger.Info("New Cthon", helputils.MustStructToKeyValueInterfaces(conf)...)
 
 	result := &cthon{
 		toolClientBase: &toolClientBase{
@@ -226,7 +226,7 @@ func (t *Tools) NewVdbench(config ...*vdbench_config.Config) ToolPropsCollector 
 	} else {
 		conf = &t.conf.Vdbench
 	}
-	logger.Action("New vdbench", helputils.MustStructToKeyValueInterfaces(conf)...)
+	logger.Info("New vdbench", helputils.MustStructToKeyValueInterfaces(conf)...)
 
 	result := &vdbench{
 		toolClientBase: &toolClientBase{
@@ -247,7 +247,7 @@ func (t *Tools) NewFio(config ...*fio_config.Config) ToolPropsCollector {
 	} else {
 		conf = &t.conf.Fio
 	}
-	logger.Action("New fio", helputils.MustStructToKeyValueInterfaces(conf)...)
+	logger.Info("New fio", helputils.MustStructToKeyValueInterfaces(conf)...)
 
 	result := &fio{
 		toolClientBase: &toolClientBase{

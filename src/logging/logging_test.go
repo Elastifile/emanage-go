@@ -31,7 +31,7 @@ func logAllLvls(msg string) {
 	logger.Crit(msg)
 	logger.Error(msg)
 	logger.Warn(msg)
-	logger.Action(msg)
+	logger.Info(msg)
 	logger.Info(msg)
 	logger.Debug(msg)
 }
@@ -56,7 +56,7 @@ func TestNoColor(t *testing.T) {
 func TestHtmlColor(t *testing.T) {
 	for color := tm.RED; color < tm.WHITE; color++ {
 		logRec := log.Record{
-			Lvl:  log.LvlAction,
+			Lvl:  log.LvlInfo,
 			Time: time.Now(),
 			Msg:  "Hello, " + tm.Bold("world!"),
 			Ctx:  []interface{}{"key1", "val1", "key2", "val2"},
@@ -102,7 +102,7 @@ func TestSysLogger(t *testing.T) {
 	}
 
 	logger := log.New()
-	global.level = log.LvlAction
+	global.level = log.LvlInfo
 	sysLogPort := 514
 
 	err := AddSysLogHandlers(sysLogPort, host)
@@ -112,7 +112,6 @@ func TestSysLogger(t *testing.T) {
 
 	for i := 0; i < 4; i++ {
 		logger.Info("Info msg", "key1", "A", "key2", "B")
-		logger.Action("Action msg", "key1", "A", "key2", "B")
 		time.Sleep(time.Second * 1)
 	}
 }

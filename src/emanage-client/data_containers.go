@@ -128,7 +128,7 @@ func (dcs *dataContainers) DirCreate(dc *DataContainer, opt *DcDirCreateOpts) (*
 		return nil, errors.New("Must specify directory opts")
 	}
 
-	logger.Action("Creating directory on data container", "path", opt.Path)
+	logger.Info("Creating directory on data container", "path", opt.Path)
 
 	var result DataContainer
 	dcDirUri := fmt.Sprintf("%s/%d/create_dir", dcUri, dc.Id)

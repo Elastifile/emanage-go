@@ -75,7 +75,7 @@ func (s *consoleStenographer) warn(indentation int, format string, args ...inter
 }
 
 func (s *consoleStenographer) action(indentation int, format string, args ...interface{}) {
-	logging.Log().Action(printBuffer + s.indent(indentation, format, args...))
+	logging.Log().Info(printBuffer + s.indent(indentation, format, args...))
 	printBuffer = ""
 }
 

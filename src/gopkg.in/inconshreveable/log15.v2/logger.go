@@ -17,7 +17,6 @@ const (
 	LvlCrit Lvl = iota
 	LvlError
 	LvlWarn
-	LvlAction
 	LvlInfo
 	LvlDebug
 )
@@ -29,8 +28,6 @@ func (l Lvl) String() string {
 		return "dbug"
 	case LvlInfo:
 		return "info"
-	case LvlAction:
-		return "actn"
 	case LvlWarn:
 		return "warn"
 	case LvlError:
@@ -50,8 +47,6 @@ func LvlFromString(lvlString string) (Lvl, error) {
 		return LvlDebug, nil
 	case "info":
 		return LvlInfo, nil
-	case "action", "actn":
-		return LvlAction, nil
 	case "warn":
 		return LvlWarn, nil
 	case "error", "eror":
@@ -143,10 +138,6 @@ func (l *logger) Debug(msg string, ctx ...interface{}) {
 
 func (l *logger) Info(msg string, ctx ...interface{}) {
 	l.write(msg, LvlInfo, ctx)
-}
-
-func (l *logger) Action(msg string, ctx ...interface{}) {
-	l.write(msg, LvlAction, ctx)
 }
 
 func (l *logger) Warn(msg string, ctx ...interface{}) {

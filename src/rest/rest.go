@@ -15,7 +15,6 @@ import (
 	"strings"
 	"time"
 
-
 	"github.com/go-errors/errors"
 	"gopkg.in/inconshreveable/log15.v2"
 
@@ -156,6 +155,17 @@ func (rs *Session) RetriedLogin(user string, password string) error {
 	return rs.RetriedLoginTimeout(user, password, 30*time.Second)
 }
 
+// Returns the inner error if the argument is an Error, otherwise
+// return it as-is.
+func InnerError(e error) error {
+	switch e := e.(type) {
+	case *errors.Error:
+		return e.Err
+	default:
+		return e
+	}
+}
+
 func (rs *Session) RetriedLoginTimeout(user string, password string, timeout time.Duration) error {
 	interval := 1 * time.Second
 	err := retry.Basic{
@@ -163,7 +173,7 @@ func (rs *Session) RetriedLoginTimeout(user string, password string, timeout tim
 		Retries: int(timeout / interval),
 	}.Do(func() error {
 		e := rs.Login(user, password)
-		if ue, ok := errors.Inner(e).(*url.Error); ok {
+		if ue, ok := InnerError(e).(*url.Error); ok {
 			if _, ok := ue.Err.(*net.OpError); ok {
 				return &retry.TemporaryError{Err: e}
 			}
@@ -364,7 +374,7 @@ func (rs *Session) WaitAllTasks(tasks []*TaskID) error {
 	for i, tid := range tasks {
 		urls[i] = tid.Url
 	}
-	logger.Action("waiting", "tasks", urls)
+	logger.Info("waiting", "tasks", urls)
 
 	s := retry.Sigmoid{
 		Limit:   1 * time.Minute,
@@ -580,7 +590,8 @@ func (rs *Session) logAction(method HttpMethod, uri string, body interface{}) {
 	}
 
 	logMsg := methodActionDict[method] + " " + uriToMsg(uri)
-	logger.WriteLvl(logLvl, logMsg, kvIfs...)
+	//logger.WriteLvl(logLvl, logMsg, kvIfs...)
+	logger.Debug(logMsg, kvIfs...)
 }
 
 func uriToMsg(uri string) (msg string) {
@@ -636,7 +647,7 @@ func uriLogLvl(uri string) log15.Lvl {
 			return lvl
 		}
 	}
-	return log15.LvlAction
+	return log15.LvlInfo
 }
 
 func singular(plural string) string {

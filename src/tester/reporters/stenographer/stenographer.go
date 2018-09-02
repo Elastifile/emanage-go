@@ -164,7 +164,7 @@ func (s *consoleStenographer) AnnounceSpecRunCompletion(summary *types.SuiteSumm
 		}
 	}
 
-	logging.Log().Action(fmt.Sprintf(
+	logging.Log().Info(fmt.Sprintf(
 		"Summary: %s | %s | %s | %s | %s - %s=%s",
 		s.colorize(colorOrGray(greenColor, summary.NumberOfPassedSpecs), "%d Passed", summary.NumberOfPassedSpecs),
 		s.colorize(colorOrGray(redColor, summary.NumberOfFailedSpecs), "%d Failed", summary.NumberOfFailedSpecs),
@@ -187,7 +187,7 @@ func (s *consoleStenographer) AnnounceSpecWillRun(spec *types.SpecSummary) {
 }
 
 func (s *consoleStenographer) announceSpec(spec *types.SpecSummary, msg string, args ...interface{}) {
-	logging.Log().Action(s.announceMessage(spec, msg), args...)
+	logging.Log().Info(s.announceMessage(spec, msg), args...)
 }
 
 func (s *consoleStenographer) announceAbort(spec *types.SpecSummary, msg string) {

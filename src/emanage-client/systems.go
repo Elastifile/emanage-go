@@ -215,7 +215,7 @@ func (s *System) logAction(msg string, kv ...interface{}) error {
 	}
 
 	kv = append(kv, "id", s.id, "name", details.Name)
-	logger.Action(msg, kv...)
+	logger.Info(msg, kv...)
 
 	return nil
 }
