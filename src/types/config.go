@@ -13,18 +13,18 @@ import (
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/koding/multiconfig"
 
-	logging_config "logging/config"
-	cthon_config "tools/cthon/config"
-	erun_config "tools/erun/config"
-	fioconfig "tools/fio/config"
-	fstool_config "tools/fstool/config"
-	migration_config "tools/migration/config"
-	sfs2008config "tools/sfs2008/config"
-	sfs2014config "tools/sfs2014/config"
-	teslatestconfig "tools/teslatest/config"
-	vdbench_config "tools/vdbench/config"
+	logging_config "github.com/elastifile/emanage-go/src/logging/config"
+	cthon_config "github.com/elastifile/emanage-go/src/tools/cthon/config"
+	erun_config "github.com/elastifile/emanage-go/src/tools/erun/config"
+	fioconfig "github.com/elastifile/emanage-go/src/tools/fio/config"
+	fstool_config "github.com/elastifile/emanage-go/src/tools/fstool/config"
+	migration_config "github.com/elastifile/emanage-go/src/tools/migration/config"
+	sfs2008config "github.com/elastifile/emanage-go/src/tools/sfs2008/config"
+	sfs2014config "github.com/elastifile/emanage-go/src/tools/sfs2014/config"
+	teslatestconfig "github.com/elastifile/emanage-go/src/tools/teslatest/config"
+	vdbench_config "github.com/elastifile/emanage-go/src/tools/vdbench/config"
 
-	"helputils"
+	"github.com/elastifile/emanage-go/src/helputils"
 )
 
 const (

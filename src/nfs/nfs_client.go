@@ -4,11 +4,11 @@ import (
 	log "gopkg.in/inconshreveable/log15.v2"
 	logext "gopkg.in/inconshreveable/log15.v2/ext"
 
-	"nfs/sunrpc/client"
-	"nfs/sunrpc/nfsx"
-	"nfs/sunrpc/portmapper"
-	"nfs/sunrpc/rpc2"
-	"types"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/client"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/nfsx"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/portmapper"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/rpc2"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 // NfsClient represents an NFS client.

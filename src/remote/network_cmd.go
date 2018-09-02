@@ -10,8 +10,8 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"helputils"
-	terrors "tools/errors"
+	"github.com/elastifile/emanage-go/src/helputils"
+	terrors "github.com/elastifile/emanage-go/src/tools/errors"
 )
 
 const (

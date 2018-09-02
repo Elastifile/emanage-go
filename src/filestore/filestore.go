@@ -10,8 +10,8 @@ import (
 	"github.com/go-errors/errors"
 	minio "github.com/minio/minio-go"
 
-	"logging"
-	"types"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var logger = logging.NewLogger("filestore")

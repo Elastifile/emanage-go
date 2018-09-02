@@ -5,20 +5,20 @@ import (
 	"os"
 	"path/filepath"
 	"time"
+	"runtime/debug"
 
 	"github.com/minio/minio-go"
 
 	"github.com/go-errors/errors"
 	minio_go "github.com/minio/minio-go"
 
-	filestore_types "filestore/types"
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
 
-	"agent"
-	"filestore"
-	"logging"
 	"messaging"
-	"types"
-	"runtime/debug"
+	"golang.org/x/crypto/ssh/agent"
+	"github.com/elastifile/emanage-go/src/filestore"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/filestore/types"
 )
 
 var logger = logging.NewLogger("filestore_handlers")

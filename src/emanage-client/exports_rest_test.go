@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"emanage-client"
-	"optional"
+	"github.com/elastifile/emanage-go/src/emanage-client"
+	"github.com/elastifile/emanage-go/src/optional"
 )
 
 // See comment before first test at data_containers_tests

@@ -13,7 +13,7 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"size"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 const (

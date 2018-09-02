@@ -11,8 +11,8 @@ import (
 	"github.com/koding/multiconfig"
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	config "logging/config"
-	"types"
+	config "github.com/elastifile/emanage-go/src/logging/config"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var logger = NewLogger("logging")

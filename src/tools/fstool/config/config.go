@@ -9,9 +9,9 @@ import (
 	"github.com/koding/multiconfig"
 	yaml "gopkg.in/yaml.v2"
 
-	"helputils"
-	"nfs/sunrpc/nfsx"
-	"size"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/nfsx"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 type Config struct {

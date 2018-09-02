@@ -12,7 +12,7 @@ import (
 	"github.com/go-errors/errors"
 	"golang.org/x/crypto/ssh"
 
-	"helputils"
+	"github.com/elastifile/emanage-go/src/helputils"
 )
 
 type ShellOpts struct {

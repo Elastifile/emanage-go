@@ -9,8 +9,8 @@ import (
 	tm "github.com/buger/goterm"
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	logging_config "logging/config"
-	"types"
+	logging_config "github.com/elastifile/emanage-go/src/logging/config"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 func TestLogger(t *testing.T) {

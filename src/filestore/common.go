@@ -8,8 +8,8 @@ import (
 	log "gopkg.in/inconshreveable/log15.v2"
 	yaml "gopkg.in/yaml.v2"
 
-	"remote"
-	"types"
+	"github.com/elastifile/emanage-go/src/remote"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 const (

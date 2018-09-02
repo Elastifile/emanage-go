@@ -5,7 +5,7 @@ import (
 
 	"github.com/minio/minio-go"
 
-	filestore_types "filestore/types"
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
 )
 
 func (m *Filestore) MakeBucket(bucket filestore_types.Bucket) error {

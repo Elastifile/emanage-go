@@ -3,12 +3,11 @@ package size_test
 import (
 	"strings"
 	"testing"
-
-	"size"
-
 	. "tester"
 
 	. "github.com/onsi/gomega"
+
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 var testValues = []struct {

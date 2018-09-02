@@ -13,8 +13,8 @@ import (
 
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	"logging"
-	"rest"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 var logger = logging.NewLogger("emanage")

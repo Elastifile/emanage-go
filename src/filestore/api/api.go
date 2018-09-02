@@ -6,11 +6,12 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"filestore"
-	filestore_types "filestore/types"
-	"logging"
 	"messaging"
-	"types"
+
+	"github.com/elastifile/emanage-go/src/filestore"
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/filestore/types"
 )
 
 var logger = logging.NewLogger("filestore_api")

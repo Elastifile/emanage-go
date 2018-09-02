@@ -3,7 +3,7 @@ package emanage
 import (
 	"fmt"
 
-	"rest"
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const clientNetworksUri = "/api/client_networks"

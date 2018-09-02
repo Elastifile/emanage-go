@@ -1,9 +1,10 @@
 package emanage
 
 import (
-	"rest"
 	"fmt"
 	"time"
+
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const replicationAgentsUri = "/api/replication_agents"

@@ -13,15 +13,16 @@ import (
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/go-errors/errors"
 
-	"containers"
-	"helputils"
-	"ioutil2"
 	"jobs"
-	"logging"
-	"runtimeutil"
-	"tools/common"
-	erun_config "tools/erun/config"
-	"types"
+	"containers"
+
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/ioutil2"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/runtimeutil"
+	"github.com/elastifile/emanage-go/src/tools/common"
+	erun_config "github.com/elastifile/emanage-go/src/tools/erun/config"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var logger = logging.NewLogger("erun")

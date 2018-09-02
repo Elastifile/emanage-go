@@ -9,10 +9,11 @@ import (
 	text_template "text/template"
 
 	"jobs"
-	"runtimeutil"
-	"tools/common"
-	tool_errors "tools/errors"
-	"types"
+
+	"github.com/elastifile/emanage-go/src/runtimeutil"
+	"github.com/elastifile/emanage-go/src/tools/common"
+	tool_errors "github.com/elastifile/emanage-go/src/tools/errors"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var (

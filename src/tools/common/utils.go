@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"types"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 const DataVolume = "/data/"

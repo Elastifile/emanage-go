@@ -10,8 +10,8 @@ import (
 
 	"github.com/go-errors/errors"
 
-	filestore_types "filestore/types"
-	"types"
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
+	"github.com/elastifile/emanage-go/src/filestore/types"
 )
 
 type SafeTransferReport struct {

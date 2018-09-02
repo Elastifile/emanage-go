@@ -7,10 +7,10 @@ import (
 
 	"github.com/go-errors/errors"
 	minio "github.com/minio/minio-go"
-
-	filestore_types "filestore/types"
-	"types"
 	"github.com/hashicorp/go-multierror"
+
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
+	"github.com/elastifile/emanage-go/src/filestore/types"
 )
 
 type TransferFilesOpts struct {

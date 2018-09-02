@@ -2,9 +2,9 @@ package emanage
 
 import (
 	"fmt"
-
-	"rest"
 	"time"
+
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 type DirLockedFilesReply struct {

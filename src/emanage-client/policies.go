@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"eurl"
-	"optional"
-	"rest"
+	"github.com/elastifile/emanage-go/src/eurl"
+	"github.com/elastifile/emanage-go/src/optional"
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const policiesUri = "api/policies"

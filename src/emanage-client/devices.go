@@ -1,8 +1,9 @@
 package emanage
 
 import (
-	"rest"
 	"fmt"
+
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const (

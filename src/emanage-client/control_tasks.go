@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"rest"
-	"retry"
-
 	"github.com/go-errors/errors"
+
+	"github.com/elastifile/emanage-go/src/rest"
+	"github.com/elastifile/emanage-go/src/retry"
 )
 
 const (

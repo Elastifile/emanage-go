@@ -7,8 +7,8 @@ import (
 	"io"
 	"os"
 
-	"nfs/sunrpc/nfsx"
-	"size"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/nfsx"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 // The Directory interface includes operations that can be performed on a directory.

@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	"size"
-	erun_config "tools/erun/config"
-	"types"
-
 	"github.com/koding/multiconfig"
+
+	"github.com/elastifile/emanage-go/src/size"
+	erun_config "github.com/elastifile/emanage-go/src/tools/erun/config"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 func TestErunRet(t *testing.T) {

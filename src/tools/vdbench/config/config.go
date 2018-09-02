@@ -6,7 +6,7 @@ import (
 	"strings"
 	"text/template"
 
-	"size"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 type Config struct {

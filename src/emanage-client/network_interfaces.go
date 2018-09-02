@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"path"
 
-	"rest"
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 var (

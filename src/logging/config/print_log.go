@@ -7,7 +7,7 @@ import (
 
 	tm "github.com/buger/goterm"
 
-	"helputils"
+	"github.com/elastifile/emanage-go/src/helputils"
 )
 
 const (

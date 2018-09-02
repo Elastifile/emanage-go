@@ -7,9 +7,9 @@ import (
 	"github.com/go-errors/errors"
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	"nfs"
-	"nfs/sunrpc/nfsx"
-	"size"
+	"github.com/elastifile/emanage-go/src/nfs"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/nfsx"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 type ShadowFile struct {

@@ -1,15 +1,14 @@
 package emanage
 
 import (
-	"testing"
 	"fmt"
 	"net/url"
-	"optional"
+	"testing"
+
+	"github.com/elastifile/emanage-go/src/optional"
 )
 
 const DC_NAME = "AAA-emanage-client-DC"
-
-
 
 func TestCreateDC(t *testing.T) {
 	CreateDC(t)
@@ -30,12 +29,11 @@ func CreateDC(t *testing.T) DataContainer {
 	return dc
 }
 
-
 func TestDeleteDC(t *testing.T) {
 	DeleteDC(t)
 }
 
-func DeleteDC (t *testing.T) bool {
+func DeleteDC(t *testing.T) bool {
 
 	fmt.Println("Starting Create DC test")
 	EMSClient := getLoggedinClient("10.11.209.226")
@@ -44,8 +42,8 @@ func DeleteDC (t *testing.T) bool {
 	opts := DcGetAllOpts{
 		GetAllOpts: GetAllOpts{
 			Search: optional.NewString(DC_NAME),
-			},
-		}
+		},
+	}
 	dcs, err := EMSClient.DataContainers.GetAll(&opts)
 	if err != nil {
 		t.Fatal(err)
@@ -60,7 +58,6 @@ func DeleteDC (t *testing.T) bool {
 	}
 	return false
 }
-
 
 func TestEMSClient(t *testing.T) {
 

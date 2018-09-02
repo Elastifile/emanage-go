@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"optional"
+	"github.com/elastifile/emanage-go/src/optional"
 
 	yaml "gopkg.in/yaml.v2"
 )

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"text/template"
 
-	"size"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 func populateConfig() *Case {

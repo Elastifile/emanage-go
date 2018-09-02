@@ -3,9 +3,9 @@ package portmapper
 
 import xdr "github.com/davecgh/go-xdr/xdr2"
 import (
-	"nfs/sunrpc/basic"
-	"nfs/sunrpc/client"
-	"nfs/sunrpc/rpc2"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/basic"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/client"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/rpc2"
 )
 
 // struct mapping

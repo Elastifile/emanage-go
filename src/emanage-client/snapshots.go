@@ -1,10 +1,11 @@
 package emanage
 
 import (
-	"rest"
 	"fmt"
 
 	"github.com/go-errors/errors"
+
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const snapshotsURI = "/api/snapshots"

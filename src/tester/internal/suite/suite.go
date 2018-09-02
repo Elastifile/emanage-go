@@ -9,17 +9,17 @@ import (
 	"time"
 
 	"elastifile/tesla/elvish"
-	"helputils"
-	"tester/config"
-	"tester/internal/containernode"
-	"tester/internal/failer"
-	"tester/internal/leafnodes"
-	"tester/internal/logging"
-	"tester/internal/spec"
-	"tester/internal/specrunner"
-	"tester/internal/writer"
-	"tester/reporters"
-	"tester/types"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/tester/config"
+	"github.com/elastifile/emanage-go/src/tester/internal/containernode"
+	"github.com/elastifile/emanage-go/src/tester/internal/failer"
+	"github.com/elastifile/emanage-go/src/tester/internal/leafnodes"
+	"github.com/elastifile/emanage-go/src/tester/internal/logging"
+	"github.com/elastifile/emanage-go/src/tester/internal/spec"
+	"github.com/elastifile/emanage-go/src/tester/internal/specrunner"
+	"github.com/elastifile/emanage-go/src/tester/internal/writer"
+	"github.com/elastifile/emanage-go/src/tester/reporters"
+	"github.com/elastifile/emanage-go/src/tester/types"
 )
 
 type ginkgoTestingT interface {

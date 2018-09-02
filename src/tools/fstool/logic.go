@@ -7,11 +7,12 @@ import (
 	"sync"
 
 	"containers"
-	"helputils"
-	"runtimeutil"
-	"tools/common"
-	fstool_config "tools/fstool/config"
-	"types"
+
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/runtimeutil"
+	"github.com/elastifile/emanage-go/src/tools/common"
+	fstool_config "github.com/elastifile/emanage-go/src/tools/fstool/config"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 const (

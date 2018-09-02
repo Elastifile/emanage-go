@@ -3,10 +3,11 @@ package common
 import (
 	"time"
 
-	"agent"
-	filestore_api "filestore/api"
 	"jobs"
-	"types"
+	"golang.org/x/crypto/ssh/agent"
+
+	filestore_api "github.com/elastifile/emanage-go/src/filestore/api"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 type DefaultLoggingTool struct {

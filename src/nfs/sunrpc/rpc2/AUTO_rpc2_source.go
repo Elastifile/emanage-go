@@ -5,8 +5,9 @@ import (
 	"fmt"
 
 	xdr "github.com/davecgh/go-xdr/xdr2"
+
+    "github.com/elastifile/emanage-go/src/nfs/sunrpc/basic"
 )
-import "nfs/sunrpc/basic"
 
 // enum msg_type
 

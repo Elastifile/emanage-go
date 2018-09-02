@@ -11,7 +11,7 @@ import (
 	"github.com/go-errors/errors"
 	"github.com/koding/multiconfig"
 
-	"helputils"
+	"github.com/elastifile/emanage-go/src/helputils"
 )
 
 const (

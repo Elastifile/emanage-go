@@ -1,14 +1,14 @@
 package emanage_test
 
 import (
+	"os"
 	"testing"
 
-	"types"
-
-	"config"
-	"emanage-client"
 	"github.com/davecgh/go-spew/spew"
-	"os"
+
+	"github.com/elastifile/emanage-go/src/config"
+	"github.com/elastifile/emanage-go/src/emanage-client"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 const sysId = 1

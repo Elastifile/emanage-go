@@ -2,7 +2,7 @@
 
 package nfsx
 
-import "nfs/sunrpc/basic"
+import "github.com/elastifile/emanage-go/src/nfs/sunrpc/basic"
 
 const MAX_ARRAY_LENGTH = 0x7fffffff
 

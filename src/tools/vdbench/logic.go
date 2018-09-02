@@ -11,13 +11,14 @@ import (
 	"strconv"
 
 	"jobs"
-	"optional"
-	"runtimeutil"
-	"size"
-	"tools/common"
-	tool_errors "tools/errors"
-	vdbench_config "tools/vdbench/config"
-	"types"
+
+	"github.com/elastifile/emanage-go/src/optional"
+	"github.com/elastifile/emanage-go/src/runtimeutil"
+	"github.com/elastifile/emanage-go/src/size"
+	"github.com/elastifile/emanage-go/src/tools/common"
+	tool_errors "github.com/elastifile/emanage-go/src/tools/errors"
+	vdbench_config "github.com/elastifile/emanage-go/src/tools/vdbench/config"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 type tool struct {

@@ -1,6 +1,6 @@
 package types
 
-import tester_types "tester/types"
+import tester_types "github.com/elastifile/emanage-go/src/tester/types"
 
 // Tesla exit codes
 

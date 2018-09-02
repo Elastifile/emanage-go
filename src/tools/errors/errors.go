@@ -6,7 +6,7 @@ import (
 	"github.com/go-errors/errors"
 	multierror "github.com/hashicorp/go-multierror"
 
-	"types"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var (

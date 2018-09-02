@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"types"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 type ErunResults struct {

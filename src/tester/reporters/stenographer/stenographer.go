@@ -13,9 +13,9 @@ import (
 
 	tm "github.com/buger/goterm"
 
-	"helputils"
-	"tester/internal/logging"
-	"tester/types"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/tester/internal/logging"
+	"github.com/elastifile/emanage-go/src/tester/types"
 )
 
 const (

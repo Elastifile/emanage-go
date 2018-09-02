@@ -3,7 +3,7 @@ package vdbench
 import (
 	"fmt"
 
-	"types"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 func makeDummy() (types.Tool, error) {

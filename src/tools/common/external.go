@@ -12,19 +12,20 @@ import (
 	docker "github.com/fsouza/go-dockerclient"
 	"github.com/go-errors/errors"
 	multierror "github.com/hashicorp/go-multierror"
+	"golang.org/x/crypto/ssh/agent"
 
-	"agent"
-	"config"
 	"containers"
-	"filestore"
-	filestore_api "filestore/api"
-	filestore_types "filestore/types"
 	"jobs"
-	"logging"
 	"orchestrator"
-	"remote"
-	tool_errors "tools/errors"
-	"types"
+
+	"github.com/elastifile/emanage-go/src/config"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/remote"
+	tool_errors "github.com/elastifile/emanage-go/src/tools/errors"
+	"github.com/elastifile/emanage-go/src/types"
+	"github.com/elastifile/emanage-go/src/filestore"
+	filestore_api "github.com/elastifile/emanage-go/src/filestore/api"
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
 )
 
 var logger = logging.NewLogger("common")

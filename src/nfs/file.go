@@ -8,8 +8,8 @@ import (
 	multierror "github.com/hashicorp/go-multierror"
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	"nfs/sunrpc/nfsx"
-	"size"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/nfsx"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 const MaxWriteBufferSize = 10 * size.MiB

@@ -10,8 +10,9 @@ import (
 	"path"
 	"strings"
 
-	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
+
+	"github.com/elastifile/emanage-go/src/github.com/pkg/sftp"
 )
 
 func Example() {

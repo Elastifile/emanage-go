@@ -1,11 +1,12 @@
 package erun_config
 
 import (
-	"size"
 	"encoding/json"
 	"fmt"
 	"testing"
 	"time"
+
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 func TestMarshalIOProfile(t *testing.T) {

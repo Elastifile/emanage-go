@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"size"
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 func TestProfileIODefaults(t *testing.T) {

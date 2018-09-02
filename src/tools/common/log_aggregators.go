@@ -1,9 +1,10 @@
 package common
 
 import (
-	"types"
 	"strings"
 	"sync"
+
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 type baseAggregator struct {

@@ -7,7 +7,7 @@ import (
 
 	"github.com/koding/multiconfig"
 
-	"rest"
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const remoteSitesUri = "/api/remote_sites"

@@ -1,9 +1,10 @@
 package erun_config
 
 import (
-	"size"
 	"testing"
 	"time"
+
+	"github.com/elastifile/emanage-go/src/size"
 )
 
 func TestProfileMetafuzzerDefaults(t *testing.T) {

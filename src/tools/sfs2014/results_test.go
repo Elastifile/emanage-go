@@ -7,8 +7,8 @@ import (
 	"github.com/davecgh/go-spew/spew"
 
 	"textutil"
-	sfs2014config "tools/sfs2014/config"
-	"types"
+	sfs2014config "github.com/elastifile/emanage-go/src/tools/sfs2014/config"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var sfsresult = `

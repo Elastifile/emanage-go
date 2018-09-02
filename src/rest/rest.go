@@ -15,15 +15,15 @@ import (
 	"strings"
 	"time"
 
-	"ejson"
-	"helputils"
-	"logging"
-	"retry"
-	"runtimeutil"
 
 	"github.com/go-errors/errors"
 	"gopkg.in/inconshreveable/log15.v2"
 
+	"github.com/elastifile/emanage-go/src/ejson"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/retry"
+	"github.com/elastifile/emanage-go/src/runtimeutil"
 )
 
 var logger = logging.NewLogger("rest")

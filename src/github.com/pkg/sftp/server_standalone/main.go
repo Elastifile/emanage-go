@@ -10,7 +10,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/pkg/sftp"
+	"github.com/elastifile/emanage-go/src/github.com/pkg/sftp"
 )
 
 func main() {

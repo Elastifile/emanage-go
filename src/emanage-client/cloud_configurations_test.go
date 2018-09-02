@@ -1,11 +1,13 @@
 package emanage_test
 
 import (
-	"github.com/davecgh/go-spew/spew"
+	"fmt"
 	"os"
 	"testing"
-	"fmt"
-	"types"
+
+	"github.com/davecgh/go-spew/spew"
+
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 const (

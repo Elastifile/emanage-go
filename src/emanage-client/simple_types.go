@@ -1,7 +1,7 @@
 package emanage
 
 import (
-	"optional"
+	"github.com/elastifile/emanage-go/src/optional"
 )
 
 ////////////////////////////////////////

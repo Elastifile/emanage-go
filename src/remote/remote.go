@@ -20,14 +20,14 @@ import (
 	"github.com/go-errors/errors"
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/koding/multiconfig"
-	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
 
-	"helputils"
-	"ioutil2"
-	"logging"
-	terrors "tools/errors"
-	"types"
+	"github.com/elastifile/emanage-go/src/github.com/pkg/sftp"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/ioutil2"
+	"github.com/elastifile/emanage-go/src/logging"
+	terrors "github.com/elastifile/emanage-go/src/tools/errors"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var logger = logging.NewLogger("remote")

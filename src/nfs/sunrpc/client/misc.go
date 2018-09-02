@@ -4,11 +4,10 @@ import (
 	"bytes"
 	"fmt"
 
+	"github.com/go-errors/errors"
 	xdr "github.com/davecgh/go-xdr/xdr2"
 
-	"nfs/sunrpc/rpc2"
-
-	"github.com/go-errors/errors"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/rpc2"
 )
 
 type Xid uint32

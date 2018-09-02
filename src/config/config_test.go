@@ -9,9 +9,9 @@ import (
 	"github.com/davecgh/go-spew/spew"
 	. "github.com/onsi/gomega"
 
-	"helputils"
-	"logging"
-	"types"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 // func TestFullTomlFile(t *testing.T) {

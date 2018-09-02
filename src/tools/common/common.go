@@ -7,14 +7,14 @@ import (
 
 	"github.com/go-errors/errors"
 	log "gopkg.in/inconshreveable/log15.v2"
+	"golang.org/x/crypto/ssh/agent"
 
-	"agent"
-	"filestore"
-	filestore_types "filestore/types"
-	"logging"
 	"textutil"
-	tool_errors "tools/errors"
-	"types"
+	"github.com/elastifile/emanage-go/src/filestore"
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
+	tool_errors "github.com/elastifile/emanage-go/src/tools/errors"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 type ToolPropertiesBase struct {

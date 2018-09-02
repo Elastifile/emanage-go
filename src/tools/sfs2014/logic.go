@@ -10,10 +10,10 @@ import (
 	"github.com/go-errors/errors"
 
 	"jobs"
-	"runtimeutil"
-	"tools/common"
-	"tools/errors"
-	"types"
+	"github.com/elastifile/emanage-go/src/runtimeutil"
+	"github.com/elastifile/emanage-go/src/tools/common"
+	"github.com/elastifile/emanage-go/src/tools/errors"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var resultSuffix = "tesla"

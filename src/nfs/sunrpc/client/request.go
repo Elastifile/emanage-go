@@ -9,8 +9,8 @@ import (
 	xdr "github.com/davecgh/go-xdr/xdr2"
 	"github.com/go-errors/errors"
 
-	"nfs/sunrpc/basic"
-	"nfs/sunrpc/rpc2"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/basic"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/rpc2"
 )
 
 type Request struct {

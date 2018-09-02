@@ -14,9 +14,9 @@ import (
 	multierror "github.com/hashicorp/go-multierror"
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	"nfs/sunrpc/basic"
-	"nfs/sunrpc/rpc2"
-	"retry"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/basic"
+	"github.com/elastifile/emanage-go/src/nfs/sunrpc/rpc2"
+	"github.com/elastifile/emanage-go/src/retry"
 )
 
 var liveClients = make(chan *Client)

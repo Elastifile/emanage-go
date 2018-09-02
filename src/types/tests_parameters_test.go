@@ -1,13 +1,14 @@
 package types_test
 
 import (
-	"types"
 	"errors"
 	"fmt"
 	"io/ioutil"
 	"os"
 
 	yaml "gopkg.in/yaml.v2"
+
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 //gb test -v -run TestDefultTest

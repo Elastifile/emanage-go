@@ -8,10 +8,10 @@ import (
 	tm "github.com/buger/goterm"
 	"github.com/go-errors/errors"
 
-	"eurl"
-	"helputils"
-	"rest"
-	"types"
+	"github.com/elastifile/emanage-go/src/eurl"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/rest"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var Timeout time.Duration = 10 * time.Minute

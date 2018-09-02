@@ -5,7 +5,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	"types"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 var sfsresult = `

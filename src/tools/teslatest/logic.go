@@ -2,9 +2,9 @@ package teslatest
 
 import (
 	"config"
-	"runtimeutil"
-	"tools/common"
-	"types"
+	"github.com/elastifile/emanage-go/src/runtimeutil"
+	"github.com/elastifile/emanage-go/src/tools/common"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 type tool struct {

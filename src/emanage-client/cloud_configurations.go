@@ -1,9 +1,10 @@
 package emanage
 
 import (
-	"rest"
-	"types"
 	"fmt"
+
+	"github.com/elastifile/emanage-go/src/rest"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 const cloudConfigurationUri = "api/cloud_configurations"

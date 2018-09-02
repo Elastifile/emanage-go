@@ -1,10 +1,12 @@
 package emanage
 
 import (
-	"remote"
-	"rest"
 	"fmt"
+
 	"github.com/go-errors/errors"
+
+	"github.com/elastifile/emanage-go/src/remote"
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const (

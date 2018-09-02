@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"logging"
-	"types"
-
 	gt "common/gotest"
-	filestore_types "filestore/types"
-	logging_config "logging/config"
+
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/types"
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
+	logging_config "github.com/elastifile/emanage-go/src/logging/config"
 )
 
 func init() {

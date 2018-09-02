@@ -3,20 +3,20 @@ package tools_api
 import (
 	"time"
 
-	"helputils"
-	"logging"
 	"messaging"
 	"sysapi"
-	"types"
+	"github.com/elastifile/emanage-go/src/helputils"
+	"github.com/elastifile/emanage-go/src/logging"
+	"github.com/elastifile/emanage-go/src/types"
 
-	cthon_config "tools/cthon/config"
-	erun_config "tools/erun/config"
-	fio_config "tools/fio/config"
-	fstool_config "tools/fstool/config"
-	migration_config "tools/migration/config"
-	sfs2008_config "tools/sfs2008/config"
-	sfs2014_config "tools/sfs2014/config"
-	vdbench_config "tools/vdbench/config"
+	cthon_config "github.com/elastifile/emanage-go/src/tools/cthon/config"
+	erun_config "github.com/elastifile/emanage-go/src/tools/erun/config"
+	fio_config "github.com/elastifile/emanage-go/src/tools/fio/config"
+	fstool_config "github.com/elastifile/emanage-go/src/tools/fstool/config"
+	migration_config "github.com/elastifile/emanage-go/src/tools/migration/config"
+	sfs2008_config "github.com/elastifile/emanage-go/src/tools/sfs2008/config"
+	sfs2014_config "github.com/elastifile/emanage-go/src/tools/sfs2014/config"
+	vdbench_config "github.com/elastifile/emanage-go/src/tools/vdbench/config"
 
 	tooly_api "tooly/api"
 )

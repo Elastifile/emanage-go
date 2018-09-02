@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"text/template"
 
-	"runtimeutil"
-	"tools/common"
-	cthon_config "tools/cthon/config"
-	tool_errors "tools/errors"
-	"types"
+	"github.com/elastifile/emanage-go/src/runtimeutil"
+	"github.com/elastifile/emanage-go/src/tools/common"
+	cthon_config "github.com/elastifile/emanage-go/src/tools/cthon/config"
+	tool_errors "github.com/elastifile/emanage-go/src/tools/errors"
+	"github.com/elastifile/emanage-go/src/types"
 )
 
 type toolCmd struct {

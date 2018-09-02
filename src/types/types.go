@@ -8,11 +8,13 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
+
 	docker "github.com/fsouza/go-dockerclient"
 	log15 "gopkg.in/inconshreveable/log15.v2"
-	filestore_types "filestore/types"
-	logging_config "logging/config"
-	"optional"
+
+	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
+	logging_config "github.com/elastifile/emanage-go/src/logging/config"
+	"github.com/elastifile/emanage-go/src/optional"
 )
 
 // A Host is used to represent a host by its hostname or IP address.

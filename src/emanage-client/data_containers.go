@@ -6,12 +6,11 @@ import (
 	"time"
 
 	"github.com/go-errors/errors"
-
-	"eurl"
-	"optional"
-	"rest"
-
 	"github.com/pborman/uuid"
+
+	"github.com/elastifile/emanage-go/src/eurl"
+	"github.com/elastifile/emanage-go/src/optional"
+	"github.com/elastifile/emanage-go/src/rest"
 )
 
 const dcUri = "api/data_containers"
