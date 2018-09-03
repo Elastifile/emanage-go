@@ -2160,9 +2160,9 @@ definitions:
           - Type: "Volume"
             Name: "local"
           - Type: "Volume"
-            Name: "localhost:5000/vieux/sshfs:latest"
+            Name: "localhost:5000/elastifileio/edvp:next"
           - Type: "Volume"
-            Name: "vieux/sshfs:latest"
+            Name: "elastifileio/edvp:next"
 
   TLSInfo:
     description: "Information about the issuer of leaf TLS certificates and the trusted root CA certificate"

@@ -15,7 +15,6 @@ func (m *Filestore) MakeBucket(bucket filestore_types.Bucket) error {
 		return nil
 	}
 	location := ""                                    // we don't care about location
-	logger.Warn("MMMMM MakeBucket", "bucket", bucket) //TODO: DELME
 	return m.Client.MakeBucket(bucketName, location)
 }
 

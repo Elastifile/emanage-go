@@ -29,17 +29,12 @@ type Policy struct {
 	TenantID    int         `json:"tenant_id"`
 }
 
-func (p *policies) GetAll(opt *GetAllOpts) ([]Policy, error) {
+func (p *policies) GetAll(opt *GetAllOpts) (result []Policy, err error) {
 	if opt == nil {
 		opt = &GetAllOpts{}
 	}
-
-	var result []Policy
-	if err := p.conn.Request(rest.MethodGet, policiesUri, opt, &result); err != nil {
-		return nil, err
-	}
-
-	return result, nil
+	err = p.conn.Request(rest.MethodGet, policiesUri, opt, &result)
+	return
 }
 
 func (p *policies) GetFull(policyId int) (Policy, error) {
