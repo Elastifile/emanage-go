@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/elastifile/emanage-go/src/optional"
+	"optional"
 )
 
 const DC_NAME = "AAA-emanage-client-DC"

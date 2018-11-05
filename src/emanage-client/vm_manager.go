@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/elastifile/emanage-go/src/rest"
-	"github.com/elastifile/emanage-go/src/types"
+	"rest"
+	"types"
 )
 
 const (

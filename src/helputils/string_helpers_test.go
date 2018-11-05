@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/elastifile/emanage-go/src/optional"
-
 	yaml "gopkg.in/yaml.v2"
+
+	"optional"
 )
 
 type some struct {

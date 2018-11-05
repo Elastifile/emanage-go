@@ -1,7 +1,7 @@
 package emanage
 
 import (
-	"github.com/elastifile/emanage-go/src/rest"
+	"rest"
 )
 
 const sysReportUri = "api/cluster_reports/recent"

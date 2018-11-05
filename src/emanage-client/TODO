@@ -1,9 +1,0 @@
-We're skipping all tests as most require real machine and other fail
-using t.fatal() which abort the while go test instead of using t.Fail()
-
-Need to be fixed:
-    1. Change all t.Fatal to t.Fail() so that go test suite will continue to rest of tests
-    2. Emanage test suite should have two types of unitests:
-            1. unitests vs mock-able management (mock rest-api).
-            2. real tests vs real machine
-    

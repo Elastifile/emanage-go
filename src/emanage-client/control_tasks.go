@@ -7,8 +7,8 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"github.com/elastifile/emanage-go/src/rest"
-	"github.com/elastifile/emanage-go/src/retry"
+	"rest"
+	"retry"
 )
 
 const (

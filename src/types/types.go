@@ -12,9 +12,8 @@ import (
 	docker "github.com/fsouza/go-dockerclient"
 	log15 "gopkg.in/inconshreveable/log15.v2"
 
-	filestore_types "github.com/elastifile/emanage-go/src/filestore/types"
-	logging_config "github.com/elastifile/emanage-go/src/logging/config"
-	"github.com/elastifile/emanage-go/src/optional"
+	logging_config "logging/config"
+	"optional"
 )
 
 // A Host is used to represent a host by its hostname or IP address.
@@ -233,7 +232,6 @@ type ToolParams struct {
 	Args              []string
 	Config            Config
 	System            *System
-	ConfigFilesBucket filestore_types.Bucket
 	TargetLoaders     []string
 
 	// Some jobs are started before the tool is created

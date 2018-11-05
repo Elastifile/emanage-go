@@ -9,9 +9,9 @@ import (
 
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	"github.com/elastifile/emanage-go/src/helputils"
-	config "github.com/elastifile/emanage-go/src/logging/config"
-	"github.com/elastifile/emanage-go/src/types"
+	"helputils"
+	config "logging/config"
+	"types"
 )
 
 const logFileMode = 0777

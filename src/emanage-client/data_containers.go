@@ -8,9 +8,9 @@ import (
 	"github.com/go-errors/errors"
 	"github.com/pborman/uuid"
 
-	"github.com/elastifile/emanage-go/src/eurl"
-	"github.com/elastifile/emanage-go/src/optional"
-	"github.com/elastifile/emanage-go/src/rest"
+	"eurl"
+	"optional"
+	"rest"
 )
 
 const dcUri = "api/data_containers"
@@ -160,5 +160,25 @@ func (dcs *dataContainers) Delete(dc *DataContainer) (result DataContainer, err 
 		return result, err
 	}
 	result.parent = *dcs
+	return result, nil
+}
+
+func (dcs *dataContainers) GetSnapshots(dc *DataContainer) (result []Snapshot, err error) {
+	uri := path.Join(dcUri, fmt.Sprintf("%v", dc.Id), "snapshots")
+	result = []Snapshot{}
+	if err = dcs.conn.Request(rest.MethodGet, uri, nil, &result); err != nil {
+		return result, err
+	}
+
+	return result, nil
+}
+
+func (dcs *dataContainers) GetExports(dc *DataContainer) (result []Export, err error) {
+	uri := path.Join(dcUri, fmt.Sprintf("%v", dc.Id), "exports")
+	result = []Export{}
+	if err = dcs.conn.Request(rest.MethodGet, uri, nil, &result); err != nil {
+		return result, err
+	}
+
 	return result, nil
 }

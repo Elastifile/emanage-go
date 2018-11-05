@@ -13,8 +13,7 @@ import (
 	"os"
 
 	"golang.org/x/crypto/ssh"
-
-	"github.com/elastifile/emanage-go/src/github.com/pkg/sftp"
+	"github.com/pkg/sftp"
 )
 
 // Based on example server code from golang.org/x/crypto/ssh and server_standalone

@@ -8,7 +8,7 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"github.com/elastifile/emanage-go/src/rest"
+	"rest"
 )
 
 var (

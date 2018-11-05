@@ -13,8 +13,7 @@ import (
 
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
-
-	"github.com/elastifile/emanage-go/src/github.com/pkg/sftp"
+	"github.com/pkg/sftp"
 )
 
 var (

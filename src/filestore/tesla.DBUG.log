@@ -1,2 +1,0 @@
-2018-03-22 13:14:23.925 DBUG: New filestore client                     Endpoint=localhost:9000   <filestore|infra/filestore/filestore.go:21>
-2018-04-10 15:36:58.952 DBUG: New filestore client                     Endpoint=localhost:9000   <filestore|infra/filestore/filestore.go:21>

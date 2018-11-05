@@ -10,11 +10,11 @@ import (
 	"github.com/koding/multiconfig"
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	"github.com/elastifile/emanage-go/src/helputils"
-	"github.com/elastifile/emanage-go/src/issues"
-	"github.com/elastifile/emanage-go/src/logging"
-	"github.com/elastifile/emanage-go/src/runtimeutil"
-	"github.com/elastifile/emanage-go/src/types"
+	"helputils"
+	"issues"
+	"logging"
+	"runtimeutil"
+	"types"
 )
 
 const JiraBaseUrl = "http://jira.il.elastifile.com"

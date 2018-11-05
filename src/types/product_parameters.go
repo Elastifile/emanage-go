@@ -3,8 +3,8 @@ package types
 import (
 	"strings"
 
-	"github.com/elastifile/emanage-go/src/helputils"
-	"github.com/elastifile/emanage-go/src/optional"
+	"helputils"
+	"optional"
 )
 
 type ProductParameters struct {

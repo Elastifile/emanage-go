@@ -12,10 +12,9 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
-
-	"github.com/elastifile/emanage-go/src/github.com/pkg/sftp"
 )
 
 var (

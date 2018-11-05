@@ -3,8 +3,8 @@ package emanage
 import (
 	"github.com/pborman/uuid"
 
-	"github.com/elastifile/emanage-go/src/eurl"
-	"github.com/elastifile/emanage-go/src/rest"
+	"eurl"
+	"rest"
 )
 
 const tenantsUri = "api/tenants"

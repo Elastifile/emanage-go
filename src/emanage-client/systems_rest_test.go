@@ -6,9 +6,9 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/elastifile/emanage-go/src/config"
-	"github.com/elastifile/emanage-go/src/emanage-client"
-	"github.com/elastifile/emanage-go/src/types"
+	"config"
+	"emanage-client"
+	"types"
 )
 
 const sysId = 1

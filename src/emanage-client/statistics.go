@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/elastifile/emanage-go/src/etime"
-	"github.com/elastifile/emanage-go/src/rest"
-	"github.com/elastifile/emanage-go/src/size"
+	"etime"
+	"rest"
+	"size"
 )
 
 const sysStatsUri = "api/system_statistics"

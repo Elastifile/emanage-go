@@ -5,8 +5,8 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"github.com/elastifile/emanage-go/src/helputils"
-	"github.com/elastifile/emanage-go/src/rest"
+	"helputils"
+	"rest"
 )
 
 const emanageVMsUri = "/api/emanage_vms"

@@ -7,7 +7,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/elastifile/emanage-go/src/types"
+	"types"
 )
 
 const (

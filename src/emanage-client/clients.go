@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/elastifile/emanage-go/src/helputils"
-	"github.com/elastifile/emanage-go/src/optional"
-	"github.com/elastifile/emanage-go/src/rest"
+	"helputils"
+	"optional"
+	"rest"
 )
 
 const clientsUri = "api/clients"

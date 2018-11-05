@@ -1,25 +1,20 @@
 package suite
 
 import (
-	"fmt"
-	"io/ioutil"
 	"math/rand"
-	"path/filepath"
 	"strings"
 	"time"
 
-	"elastifile/tesla/elvish"
-	"github.com/elastifile/emanage-go/src/helputils"
-	"github.com/elastifile/emanage-go/src/tester/config"
-	"github.com/elastifile/emanage-go/src/tester/internal/containernode"
-	"github.com/elastifile/emanage-go/src/tester/internal/failer"
-	"github.com/elastifile/emanage-go/src/tester/internal/leafnodes"
-	"github.com/elastifile/emanage-go/src/tester/internal/logging"
-	"github.com/elastifile/emanage-go/src/tester/internal/spec"
-	"github.com/elastifile/emanage-go/src/tester/internal/specrunner"
-	"github.com/elastifile/emanage-go/src/tester/internal/writer"
-	"github.com/elastifile/emanage-go/src/tester/reporters"
-	"github.com/elastifile/emanage-go/src/tester/types"
+	"tester/config"
+	"tester/internal/containernode"
+	"tester/internal/failer"
+	"tester/internal/leafnodes"
+	"tester/internal/logging"
+	"tester/internal/spec"
+	"tester/internal/specrunner"
+	"tester/internal/writer"
+	"tester/reporters"
+	"tester/types"
 )
 
 type ginkgoTestingT interface {
@@ -84,24 +79,24 @@ func (suite *Suite) Run(t ginkgoTestingT, description string, reporters []report
 	return success, hasProgFocus
 }
 
-func (suite *Suite) walkIncludeFile(includeFile string, do func(string)) error {
-	yamlBody, err := ioutil.ReadFile(includeFile)
-	if err != nil {
-		return err
-	}
-	includeDir := filepath.Dir(includeFile)
-
-	err = elvish.Walk(elvish.WalkOpts{
-		YamlBody: yamlBody,
-		Do:       do,
-		Recursion: func(i int, item string) error {
-			path := helputils.FullPath(includeDir, item)
-			if err := suite.walkIncludeFile(path, do); err != nil {
-				return fmt.Errorf("%s (item #%d: '%s')", err, i+1, item)
-			}
-			return nil
-		},
-	})
+func (suite *Suite) walkIncludeFile(includeFile string, do func(string)) (err error) {
+	//yamlBody, err := ioutil.ReadFile(includeFile)
+	//if err != nil {
+	//	return err
+	//}
+	//includeDir := filepath.Dir(includeFile)
+	//
+	//err = elvish.Walk(elvish.WalkOpts{
+	//	YamlBody: yamlBody,
+	//	Do:       do,
+	//	Recursion: func(i int, item string) error {
+	//		path := helputils.FullPath(includeDir, item)
+	//		if err := suite.walkIncludeFile(path, do); err != nil {
+	//			return fmt.Errorf("%s (item #%d: '%s')", err, i+1, item)
+	//		}
+	//		return nil
+	//	},
+	//})
 
 	return err
 }

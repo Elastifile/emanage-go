@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/elastifile/emanage-go/src/rest"
+	"rest"
 )
 
 type dcPairs struct {

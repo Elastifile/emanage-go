@@ -2,16 +2,17 @@ package logging
 
 import (
 	"fmt"
+	"log/syslog"
 	"strconv"
 	"strings"
 
 	colorable "github.com/mattn/go-colorable"
 	log "gopkg.in/inconshreveable/log15.v2"
-	"gopkg.in/inconshreveable/log15.v2/stack"
+	"gopkg.in/inconshreveable/log15.v2_ild/stack"
 
-	"github.com/elastifile/emanage-go/src/helputils"
-	config "github.com/elastifile/emanage-go/src/logging/config"
-	"github.com/elastifile/emanage-go/src/types"
+	"helputils"
+	config "logging/config"
+	"types"
 )
 
 const (
@@ -55,7 +56,7 @@ func netHandler(conf *config.NetLogger) log.Handler {
 // Remote syslog handler
 func sysLogHandler(net, addr string, port int, frmt log.Format) (log.Handler, error) {
 	dest := fmt.Sprintf("%s:%d", addr, port)
-	return log.SyslogNetHandler(net, dest, syslogTag, frmt)
+	return log.SyslogNetHandler(net, dest, syslog.LOG_INFO, syslogTag, frmt)
 }
 
 // getSysLogHandlers supports multiple syslog targets, sets a proper format + log lvl filter.
@@ -125,7 +126,7 @@ func fileHandler(opts fileOpts) log.Handler {
 // Caller log Handler
 func callerHandler(h log.Handler) log.Handler {
 	return log.FuncHandler(func(rec *log.Record) error {
-		call := stack.Call(rec.CallPC[0])
+		call := stack.Call(rec.Call.Frame().PC)
 		caller := fmt.Sprintf("%+v", call)
 		caller = strings.TrimPrefix(caller, "elastifile/tesla/")
 

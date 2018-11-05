@@ -13,8 +13,8 @@ import (
 
 	log "gopkg.in/inconshreveable/log15.v2"
 
-	"github.com/elastifile/emanage-go/src/logging"
-	"github.com/elastifile/emanage-go/src/rest"
+	"logging"
+	"rest"
 )
 
 var logger = logging.NewLogger("emanage")
@@ -28,7 +28,6 @@ type Client struct {
 	Hosts               *hosts
 	Events              *events
 	NetworkInterfaces   *netInterfaces
-	SwPackages          *swPackages
 	Policies            *policies
 	Sessions            *rest.Session
 	Devices             *devices
@@ -86,7 +85,6 @@ func NewClient(baseURL *url.URL) *Client {
 		Exports:             &exports{s},
 		Hosts:               &hosts{s},
 		NetworkInterfaces:   &netInterfaces{s},
-		SwPackages:          &swPackages{s},
 		Policies:            &policies{s},
 		Sessions:            s,
 		Devices:             &devices{s},

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/elastifile/emanage-go/src/types"
+	"types"
 )
 
 func TestFile(t *testing.T) {

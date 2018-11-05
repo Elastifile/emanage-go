@@ -3,9 +3,9 @@ package emanage
 import (
 	"fmt"
 
-	"github.com/elastifile/emanage-go/src/optional"
-	"github.com/elastifile/emanage-go/src/rest"
-	"github.com/elastifile/emanage-go/src/errors"
+	"errors"
+	"optional"
+	"rest"
 )
 
 type ExportRule struct {

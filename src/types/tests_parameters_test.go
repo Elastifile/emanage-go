@@ -8,7 +8,7 @@ import (
 
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/elastifile/emanage-go/src/types"
+	"types"
 )
 
 //gb test -v -run TestDefultTest

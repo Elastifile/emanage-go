@@ -13,18 +13,8 @@ import (
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/koding/multiconfig"
 
-	logging_config "github.com/elastifile/emanage-go/src/logging/config"
-	cthon_config "github.com/elastifile/emanage-go/src/tools/cthon/config"
-	erun_config "github.com/elastifile/emanage-go/src/tools/erun/config"
-	fioconfig "github.com/elastifile/emanage-go/src/tools/fio/config"
-	fstool_config "github.com/elastifile/emanage-go/src/tools/fstool/config"
-	migration_config "github.com/elastifile/emanage-go/src/tools/migration/config"
-	sfs2008config "github.com/elastifile/emanage-go/src/tools/sfs2008/config"
-	sfs2014config "github.com/elastifile/emanage-go/src/tools/sfs2014/config"
-	teslatestconfig "github.com/elastifile/emanage-go/src/tools/teslatest/config"
-	vdbench_config "github.com/elastifile/emanage-go/src/tools/vdbench/config"
-
-	"github.com/elastifile/emanage-go/src/helputils"
+	"helputils"
+	logging_config "logging/config"
 )
 
 const (
@@ -57,27 +47,17 @@ type Config struct {
 	Elab         Elab                  `doc:"elab global configs"`
 	Tests        Tests                 `doc:"test configs"`
 	Logging      logging_config.Config `doc:"logging configs"`
-	Tester       teslatestconfig.Config
+	//Tester       teslatestconfig.Config
 	CloudConnect CloudConnect
 	// primary system struct remains static so it would be accessed by '-o' flags (pointers cannot access!)
 	System System `doc:"entire system data, tesla & elab"`
 	// system slice is dynamic so the first would point to the primary, above
 	Systems []*System `doc:"slice of system data pointers"`
-
-	// tools
-	Sfs2008   sfs2008config.Config
-	Sfs2014   sfs2014config.Config
-	Erun      *erun_config.Config
-	Migration migration_config.Config
-	Cthon     cthon_config.Config
-	Vdbench   vdbench_config.Config
-	Fio       fioconfig.Config // This will be exported as environment parameter like this: TESLA_FIO_*
-	FsTool    fstool_config.Config
 }
 
 func NewConfig() *Config {
 	var conf Config
-	conf.Erun = &erun_config.Config{}
+	//conf.Erun = &erun_config.Config{}
 	tagLoader := &multiconfig.TagLoader{}
 
 	if err := tagLoader.Load(&conf); err != nil {

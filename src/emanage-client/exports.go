@@ -6,9 +6,9 @@ import (
 
 	"github.com/pborman/uuid"
 
-	"github.com/elastifile/emanage-go/src/eurl"
-	"github.com/elastifile/emanage-go/src/optional"
-	"github.com/elastifile/emanage-go/src/rest"
+	"eurl"
+	"optional"
+	"rest"
 )
 
 const exportsUri = "api/exports"
