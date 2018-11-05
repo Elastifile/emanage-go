@@ -38,6 +38,26 @@ const (
 	ExportStateDisabled ExportStateType = "export_state_disabled"
 )
 
+type ExportCreateForVolumeOpts struct {
+	DcId        int                 `json:"data_container_id"`
+	Path        string               `json:"path"`
+	Uuid        optional.String      `json:"uuid,omitempty"` // Should type be uuid.UUID? How do we handle nilable?
+	Access      ExportAccessModeType `json:"access_permission,omitempty"`
+	UserMapping UserMappingType      `json:"user_mapping,omitempty"`
+	Uid         int                  `json:"uid,omitempty"`
+	Gid         int                  `json:"gid,omitempty"`
+}
+
+type ExportCreateForSnapshotOpts struct {
+	SnapShotId  int                 `json:"snapshot_id"`
+	Path        string               `json:"path"`
+	Uuid        optional.String      `json:"uuid,omitempty"` // Should type be uuid.UUID? How do we handle nilable?
+	Access      ExportAccessModeType `json:"access_permission,omitempty"`
+	UserMapping UserMappingType      `json:"user_mapping,omitempty"`
+	Uid         int                  `json:"uid,omitempty"`
+	Gid         int                  `json:"gid,omitempty"`
+}
+
 type Export struct {
 	Id              int                  `json:"id"`
 	Name            string               `json:"name"`
@@ -114,15 +134,30 @@ var ExportAccessModeValues = []ExportAccessModeType{
 	ExportAccessNone,
 }
 
-func (ex *exports) Create(name string, opt *ExportCreateOpts) (Export, error) {
+func (ex *exports) CreateForVolume(name string, opt *ExportCreateForVolumeOpts) (Export, error) {
 	if opt == nil {
-		opt = &ExportCreateOpts{}
+		opt = &ExportCreateForVolumeOpts{}
 	}
-
 	params := struct {
 		Name string `json:"name"`
-		ExportCreateOpts
+		ExportCreateForVolumeOpts
 	}{name, *opt}
+
+	var result Export
+	err := ex.session.Request(rest.MethodPost, exportsUri, params, &result)
+	return result, err
+}
+
+//TODO: need refactor
+func (ex *exports) CreateForSnapshot(name string, opt *ExportCreateForSnapshotOpts) (Export, error) {
+	if opt == nil {
+		opt = &ExportCreateForSnapshotOpts{}
+	}
+	params := struct {
+		Name string `json:"name"`
+		ExportCreateForSnapshotOpts
+	}{name, *opt}
+
 	var result Export
 	err := ex.session.Request(rest.MethodPost, exportsUri, params, &result)
 	return result, err
