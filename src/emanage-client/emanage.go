@@ -103,7 +103,7 @@ func NewClient(baseURL *url.URL) *Client {
 		CloudProviders:      &cloudProviders{s},
 		CloudConfigurations: &cloudConfigurations{s},
 
-		Logger: logger.New("baseURL", baseURL.String()),
+		Logger: log.New("baseURL", baseURL.String()),
 	}
 }
 
