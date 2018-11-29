@@ -8,20 +8,20 @@ import (
 	"optional"
 )
 
-const DC_NAME = "AAA-emanage-client-DC"
+const DC_NAME_TEST = "AAA-emanage-client-DC"
 
 func TestCreateDC(t *testing.T) {
-	CreateDC(t)
+	CreateDCTest(t)
 }
 
-func CreateDC(t *testing.T) DataContainer {
+func CreateDCTest(t *testing.T) DataContainer {
 
 	fmt.Println("Starting Create DC test")
-	EMSClient := getLoggedinClient("10.11.209.226")
+	EMSClient := getLoggedinClientTest("10.11.209.226")
 
 	// create DC
-	dcCreateOpts := DcCreateOpts{Name: DC_NAME, Dedup: 0, Compression: 0}
-	dc, err := EMSClient.DataContainers.Create(DC_NAME, 1, &dcCreateOpts)
+	dcCreateOpts := DcCreateOpts{Name: DC_NAME_TEST, Dedup: 0, Compression: 0}
+	dc, err := EMSClient.DataContainers.Create(DC_NAME_TEST, 1, &dcCreateOpts)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -41,7 +41,7 @@ func DeleteDC(t *testing.T) bool {
 	// get DC
 	opts := DcGetAllOpts{
 		GetAllOpts: GetAllOpts{
-			Search: optional.NewString(DC_NAME),
+			Search: optional.NewString(DC_NAME_TEST),
 		},
 	}
 	dcs, err := EMSClient.DataContainers.GetAll(&opts)
@@ -62,7 +62,7 @@ func DeleteDC(t *testing.T) bool {
 func TestEMSClient(t *testing.T) {
 
 	fmt.Println("Starting EMS EMSClient test")
-	EMSClient := getLoggedinClient("10.11.209.206")
+	EMSClient := getLoggedinClient("35.241.215.32")
 
 	// get all hosts
 	opts := &GetAllOpts{}
@@ -78,7 +78,7 @@ func TestEMSClient(t *testing.T) {
 	}
 }
 
-func getLoggedinClient(IP string) *Client {
+func getLoggedinClientTest(IP string) *Client {
 
 	// make EMSClient
 	eurl := &url.URL{

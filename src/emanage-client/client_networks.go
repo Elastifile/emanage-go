@@ -62,7 +62,7 @@ func (cn *clientNetworks) Delete(id int) (ClientNetwork, error) {
 func (cn *clientNetworks) GetDefaultClientNetwork() (cnw ClientNetwork, err error) {
 	clientNetworkSlice, err := cn.GetAll()
 	if err != nil {
-		return cnw, fmt.Errorf("Error retrieving client network slice from client networks api", "error", err)
+		return cnw, fmt.Errorf("Error retrieving client network slice from client networks api. err=%v", err)
 	}
 	for _, cnws := range clientNetworkSlice {
 		return cnws, nil
