@@ -9,7 +9,6 @@ import (
 	"strings"
 	"time"
 
-	docker "github.com/fsouza/go-dockerclient"
 	log15 "gopkg.in/inconshreveable/log15.v2"
 
 	logging_config "logging/config"
@@ -337,7 +336,7 @@ type ExternalProperties interface {
 	GetImage() *Image
 	GetMasterCommand() ([]string, error)
 	GetSlaveCommand(Host) ([]string, error)
-	GetDockerHostConfig() *docker.HostConfig
+//	GetDockerHostConfig() *docker.HostConfig
 	Master() Host
 	WaitStrategy(*Context) ErrorHandlingStrategy
 }
@@ -372,7 +371,7 @@ type ContainerStartOpts struct {
 	Cmd              []string
 	DataStorePath    string
 	JobID            JobID
-	DockerHostConfig *docker.HostConfig
+//	DockerHostConfig *docker.HostConfig
 }
 
 type Deployment struct {
